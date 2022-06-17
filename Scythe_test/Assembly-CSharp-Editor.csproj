@@ -302,6 +302,15 @@
  <Reference Include="unityplastic">
  <HintPath>D:/GitHub/Scyth_test/Scythe_test/Library/PackageCache/com.unity.collab-proxy@1.15.17/Lib/Editor/PlasticSCM/unityplastic.dll</HintPath>
  </Reference>
+ <Reference Include="DOTweenEditor">
+ <HintPath>D:/GitHub/Scyth_test/Scythe_test/Assets/Plugins/Demigiant/DOTween/Editor/DOTweenEditor.dll</HintPath>
+ </Reference>
+ <Reference Include="DOTween">
+ <HintPath>D:/GitHub/Scyth_test/Scythe_test/Assets/Plugins/Demigiant/DOTween/DOTween.dll</HintPath>
+ </Reference>
+ <Reference Include="DOTweenUpgradeManager">
+ <HintPath>D:/GitHub/Scyth_test/Scythe_test/Assets/Plugins/Demigiant/DOTween/Editor/DOTweenUpgradeManager.dll</HintPath>
+ </Reference>
  <Reference Include="nunit.framework">
  <HintPath>D:/GitHub/Scyth_test/Scythe_test/Library/PackageCache/com.unity.ext.nunit@1.0.6/net35/unity-custom/nunit.framework.dll</HintPath>
  </Reference>
@@ -715,6 +724,10 @@
  </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{3be874ed-e8b4-adb4-a083-fcbe01074c3c}</Project>
+      <Name>Assembly-CSharp-firstpass</Name>
+    </ProjectReference>
     <ProjectReference Include="Assembly-CSharp.csproj">
       <Project>{5dc54223-b132-8be7-33a4-c39328b3452c}</Project>
       <Name>Assembly-CSharp</Name>

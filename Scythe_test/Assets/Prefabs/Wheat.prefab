@@ -49,6 +49,7 @@ MonoBehaviour:
   - {fileID: -5523277661179574252, guid: cf8bf4aa1d996db48b7a6c5892715777, type: 3}
   - {fileID: -5523277661179574252, guid: d73e674bec247ac4b9cdee773f9a83f7, type: 3}
   - {fileID: -5523277661179574252, guid: cedcd0bf03dfa96428d4c0ef4c00b53b, type: 3}
+  wheatBlockPrefab: {fileID: 8042878626925437788, guid: 8689457045c60d5439e3cfc10a6fdb7a, type: 3}
 --- !u!65 &1205254711768875332
 BoxCollider:
   m_ObjectHideFlags: 0

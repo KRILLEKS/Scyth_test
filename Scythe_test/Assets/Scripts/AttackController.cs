@@ -7,8 +7,8 @@ using UnityEngine;
 public class AttackController : MonoBehaviour
 {
    // this mesh will be used as a collider
-   [SerializeField] private Mesh attackMesh;
    [SerializeField] private Vector3 offset;
+   [SerializeField] private GameObject scythe;
 
    // public static variables
    public static bool able2CutWheat; // if this is a true wheat can be cut when colliding with scythe
@@ -22,6 +22,7 @@ public class AttackController : MonoBehaviour
    private void Awake()
    {
       _animator = GetComponent<Animator>();
+      scythe.SetActive(false);
    }
    
    // this method for animator
@@ -38,6 +39,18 @@ public class AttackController : MonoBehaviour
       able2CutWheat = false;
    }
 
+   // invokes at the start of attack animation
+   public void AddScythe()
+   {
+      scythe.SetActive(true);
+   }
+   
+   // invokes at the end of attack animation and remove scythe
+   public void RemoveScythe()
+   {
+      scythe.SetActive(false);
+   }
+   
    public static void StartAttackAnimation()
    {
       _animator.SetBool(Attack, true);

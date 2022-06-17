@@ -1,12 +1,14 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using EzySlice;
+using Unity.Mathematics;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class WheatController : MonoBehaviour
 {
    [SerializeField] private Mesh[] meshesArray;
+   [SerializeField] private GameObject wheatBlockPrefab;
 
    // private variables
    private MeshFilter _meshFilter;
@@ -25,13 +27,17 @@ public class WheatController : MonoBehaviour
    {
       if (AttackController.able2CutWheat && _currentMeshIndex > 0 && _isAble2TakeDamage)
       {
-         Debug.Log("take dmg");
          _meshFilter.mesh = meshesArray[--_currentMeshIndex];
          _isAble2TakeDamage = false;
+         // I didn't make any effects for that
+         Instantiate(wheatBlockPrefab,
+                     transform.position + new Vector3(Random.Range(-.3f, .3f), 1.5f, Random.Range(-.3f, .3f)),
+                     quaternion.identity,
+                     transform.parent); // goes into wheat holder
+         
          StartCoroutine(InvulnerableCoroutine());
 
-         if (_spawnCoroutine == null)
-            _spawnCoroutine = StartCoroutine(SpawnCoroutine());
+         _spawnCoroutine ??= StartCoroutine(SpawnCoroutine());
       }
 
       IEnumerator InvulnerableCoroutine()
