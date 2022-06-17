@@ -299,6 +299,9 @@
  <Reference Include="unityplastic">
  <HintPath>D:/GitHub/Scyth_test/Scythe_test/Library/PackageCache/com.unity.collab-proxy@1.15.17/Lib/Editor/PlasticSCM/unityplastic.dll</HintPath>
  </Reference>
+ <Reference Include="Unity.Burst.Unsafe">
+ <HintPath>D:/GitHub/Scyth_test/Scythe_test/Library/PackageCache/com.unity.burst@1.3.4/Unity.Burst.Unsafe.dll</HintPath>
+ </Reference>
  <Reference Include="nunit.framework">
  <HintPath>D:/GitHub/Scyth_test/Scythe_test/Library/PackageCache/com.unity.ext.nunit@1.0.6/net35/unity-custom/nunit.framework.dll</HintPath>
  </Reference>
@@ -691,6 +694,24 @@
  </Reference>
  <Reference Include="Cinemachine">
  <HintPath>D:/GitHub/Scyth_test/Scythe_test/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Mathematics">
+ <HintPath>D:/GitHub/Scyth_test/Scythe_test/Library/ScriptAssemblies/Unity.Mathematics.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Burst">
+ <HintPath>D:/GitHub/Scyth_test/Scythe_test/Library/ScriptAssemblies/Unity.Burst.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Mathematics.Editor">
+ <HintPath>D:/GitHub/Scyth_test/Scythe_test/Library/ScriptAssemblies/Unity.Mathematics.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Animation.Rigging">
+ <HintPath>D:/GitHub/Scyth_test/Scythe_test/Library/ScriptAssemblies/Unity.Animation.Rigging.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Animation.Rigging.Editor">
+ <HintPath>D:/GitHub/Scyth_test/Scythe_test/Library/ScriptAssemblies/Unity.Animation.Rigging.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Burst.Editor">
+ <HintPath>D:/GitHub/Scyth_test/Scythe_test/Library/ScriptAssemblies/Unity.Burst.Editor.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>

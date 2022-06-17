@@ -18,6 +18,8 @@ public class MovementController : MonoBehaviour
    // private variables
    private Rigidbody _rigidbody;
    private Animator _animator;
+   
+   // IDs
    private static readonly int IsIdle = Animator.StringToHash("IsIdle");
 
    private float _speed

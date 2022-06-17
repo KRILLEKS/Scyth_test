@@ -60,6 +60,8 @@
      <Compile Include="Assets\Joystick Pack\Examples\JoystickSetterExample.cs" />
      <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\FixedJoystick.cs" />
      <Compile Include="Assets\Scripts\MovementController.cs" />
+     <Compile Include="Assets\Scripts\AttackController.cs" />
+     <Compile Include="Assets\AttackRadiusHandler.cs" />
  <Reference Include="UnityEngine">
  <HintPath>F:/Unity/2020.3.35f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>
@@ -281,6 +283,9 @@
  </Reference>
  <Reference Include="UnityEditor.UnityConnectModule">
  <HintPath>F:/Unity/2020.3.35f1/Editor/Data/Managed/UnityEngine/UnityEditor.UnityConnectModule.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Burst.Unsafe">
+ <HintPath>D:/GitHub/Scyth_test/Scythe_test/Library/PackageCache/com.unity.burst@1.3.4/Unity.Burst.Unsafe.dll</HintPath>
  </Reference>
  <Reference Include="netstandard">
  <HintPath>F:/Unity/2020.3.35f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
@@ -662,6 +667,24 @@
  </Reference>
  <Reference Include="Cinemachine">
  <HintPath>D:/GitHub/Scyth_test/Scythe_test/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Mathematics">
+ <HintPath>D:/GitHub/Scyth_test/Scythe_test/Library/ScriptAssemblies/Unity.Mathematics.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Burst">
+ <HintPath>D:/GitHub/Scyth_test/Scythe_test/Library/ScriptAssemblies/Unity.Burst.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Mathematics.Editor">
+ <HintPath>D:/GitHub/Scyth_test/Scythe_test/Library/ScriptAssemblies/Unity.Mathematics.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Animation.Rigging">
+ <HintPath>D:/GitHub/Scyth_test/Scythe_test/Library/ScriptAssemblies/Unity.Animation.Rigging.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Animation.Rigging.Editor">
+ <HintPath>D:/GitHub/Scyth_test/Scythe_test/Library/ScriptAssemblies/Unity.Animation.Rigging.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Burst.Editor">
+ <HintPath>D:/GitHub/Scyth_test/Scythe_test/Library/ScriptAssemblies/Unity.Burst.Editor.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
