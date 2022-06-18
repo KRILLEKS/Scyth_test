@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using Unity.Mathematics;
 using UnityEngine;
 
@@ -10,6 +11,9 @@ public class BackpackController : MonoBehaviour
    [SerializeField] private GameObject backpackHolderSerializable;
    [SerializeField] private Vector3 startPosSerializable; // left bot block closest to players back
    [SerializeField] private float distanceSerializable;
+   
+   // public static variables
+   public static readonly List<GameObject> _blocks = new List<GameObject>();
 
    // private static variables
    // I want to make them static cause it's inefficient to use Find method in every block
@@ -18,7 +22,6 @@ public class BackpackController : MonoBehaviour
    private static Vector3 _startPos;
    private static float _distance;
    private static int _maxAmount;
-   private static List<GameObject> _blocks = new List<GameObject>();
 
    private void Awake()
    {
@@ -49,6 +52,17 @@ public class BackpackController : MonoBehaviour
       _blocks[_blocks.Count - 1].transform.localRotation = Quaternion.identity;
 
       return true;
+   }
+
+   // returns position of sold block
+   // mb I shouldn't split this into 2 different methods I'm not sure about that
+   public static Vector3 SellBlock()
+   {
+      GameObject block = _blocks[_blocks.Count - 1];
+      _blocks.Remove(block);
+      Destroy(block);
+
+      return block.transform.position;
    }
 
    private void OnDrawGizmos()

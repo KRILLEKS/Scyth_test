@@ -11,7 +11,7 @@ public class MovementController : MonoBehaviour
    // usually I separate input and movement
    // but cause we need input only in movement and project won't scale I won't do that
    [Header("Values")]
-   [SerializeField, Range(1f,3f)] private float speedSerializable;
+   [SerializeField, Range(2f,5f)] private float speed;
    [Header("Objects")]
    [SerializeField] private FloatingJoystick joystick;
    
@@ -22,15 +22,6 @@ public class MovementController : MonoBehaviour
    // IDs
    private static readonly int IsIdle = Animator.StringToHash("IsIdle");
 
-   private float _speed
-   {
-      get
-      {
-         // we multiply by 100 to scale it easily
-         return speedSerializable * Time.fixedDeltaTime * 100f;
-      }
-   }
-   
    private void Awake()
    {
       _rigidbody = GetComponent<Rigidbody>();
@@ -39,7 +30,7 @@ public class MovementController : MonoBehaviour
 
    private void FixedUpdate()
    {
-      _rigidbody.velocity = new Vector3(joystick.Horizontal * _speed, _rigidbody.velocity.y, joystick.Vertical * _speed);
+      _rigidbody.velocity = new Vector3(joystick.Horizontal * speed, _rigidbody.velocity.y, joystick.Vertical * speed);
 
       if (joystick.Vertical != 0 || joystick.Horizontal != 0)
       {

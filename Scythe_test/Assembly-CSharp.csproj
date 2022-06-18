@@ -52,14 +52,15 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\WheatController.cs" />
+     <Compile Include="Assets\Scripts\BackpackController.cs" />
      <Compile Include="Assets\Scripts\AttackController.cs" />
      <Compile Include="Assets\Scripts\GenerateField.cs" />
      <Compile Include="Assets\Scripts\MovementController.cs" />
-     <Compile Include="Assets\Scripts\AttackRadiusHandler.cs" />
-     <Compile Include="Assets\Scripts\WheatController.cs" />
      <Compile Include="Assets\Scripts\Constants.cs" />
+     <Compile Include="Assets\Scripts\SellPlaneController.cs" />
      <Compile Include="Assets\Scripts\WheatBlockController.cs" />
-     <Compile Include="Assets\Scripts\BackpackController.cs" />
+     <Compile Include="Assets\Scripts\AttackRadiusHandler.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
