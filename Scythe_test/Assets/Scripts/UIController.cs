@@ -36,8 +36,7 @@ public class UIController : MonoBehaviour
       // floor to int in case player will get float amount of money per wheat
       _coinIcon.transform.DOScale(1.25f, 0.1f)
                .SetEase(Ease.InOutSine)
-               .OnComplete(() => _coinIcon.transform.DOScale(1, 0.1f)
-                                          .OnComplete(() => _coinText.text = (_currentMoneyAmount += Constants.moneyPerOneCoin) + $"/{_maxWheatAmount}"));
+               .OnComplete(() => _coinIcon.transform.DOScale(1, 0.1f).OnComplete(() => _coinText.text = (_currentMoneyAmount += Constants.moneyPerOneCoin).ToString()));
    }
 
    public static void UpdateWheatInfo(int currentAmount)

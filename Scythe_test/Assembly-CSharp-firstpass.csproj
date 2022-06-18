@@ -686,6 +686,15 @@
  <Reference Include="Unity.Mathematics">
  <HintPath>D:/GitHub/Scyth_test/Scythe_test/Library/ScriptAssemblies/Unity.Mathematics.dll</HintPath>
  </Reference>
+ <Reference Include="Unity.Recorder.Editor">
+ <HintPath>D:/GitHub/Scyth_test/Scythe_test/Library/ScriptAssemblies/Unity.Recorder.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Recorder">
+ <HintPath>D:/GitHub/Scyth_test/Scythe_test/Library/ScriptAssemblies/Unity.Recorder.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Recorder.Base">
+ <HintPath>D:/GitHub/Scyth_test/Scythe_test/Library/ScriptAssemblies/Unity.Recorder.Base.dll</HintPath>
+ </Reference>
   </ItemGroup>
   <ItemGroup>
   </ItemGroup>
