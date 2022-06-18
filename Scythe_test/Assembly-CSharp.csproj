@@ -61,6 +61,10 @@
      <Compile Include="Assets\Scripts\SellPlaneController.cs" />
      <Compile Include="Assets\Scripts\WheatBlockController.cs" />
      <Compile Include="Assets\Scripts\AttackRadiusHandler.cs" />
+     <Compile Include="Assets\Scripts\CoinController.cs" />
+     <Compile Include="Assets\Scripts\UIController.cs" />
+     <Compile Include="Assets\Scripts\Values.cs" />
+     <Compile Include="Assets\Scripts\ValuesController.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />

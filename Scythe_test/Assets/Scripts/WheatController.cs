@@ -50,7 +50,7 @@ public class WheatController : MonoBehaviour
       {
          while (_currentMeshIndex < meshesArray.Length - 1)
          {
-            yield return new WaitForSeconds(Constants.WHEAT_RESPAWN_TIME);
+            yield return new WaitForSeconds(Constants.wheatRespawnTime);
             _meshFilter.mesh = meshesArray[++_currentMeshIndex];
          }
 

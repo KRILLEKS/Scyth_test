@@ -32,7 +32,7 @@ public class BackpackController : MonoBehaviour
 
       // to prevent possible issues
       _backpackHolder.transform.position = Vector3.zero;
-      _maxAmount = Constants.BACKPACK_SIZE.x * Constants.BACKPACK_SIZE.y * Constants.BACKPACK_SIZE.z;
+      _maxAmount = Constants.backpackSize.x * Constants.backpackSize.y * Constants.backpackSize.z;
    }
 
    // true if able to add block
@@ -46,11 +46,12 @@ public class BackpackController : MonoBehaviour
                               Quaternion.identity,
                               _backpackHolder.transform));
 
-      _blocks[_blocks.Count - 1].transform.localPosition = _startPos + new Vector3((_blocks.Count - 1) % Constants.BACKPACK_SIZE.x * _distance,
-                                                                                   (_blocks.Count - 1) / 16 * _distance,
-                                                                                   -(_blocks.Count - 1) % 16 / 4 * _distance);
+      _blocks[_blocks.Count - 1].transform.localPosition = _startPos + new Vector3((_blocks.Count - 1) % Constants.backpackSize.x * _distance,
+                                                                                   (_blocks.Count - 1) / (Constants.backpackSize.x * Constants.backpackSize.z) * _distance,
+                                                                                   -(_blocks.Count - 1) % (Constants.backpackSize.x * Constants.backpackSize.z) / Constants.backpackSize.z * _distance);
       _blocks[_blocks.Count - 1].transform.localRotation = Quaternion.identity;
 
+      UIController.UpdateWheatInfo(_blocks.Count);
       return true;
    }
 
@@ -61,6 +62,7 @@ public class BackpackController : MonoBehaviour
       GameObject block = _blocks[_blocks.Count - 1];
       _blocks.Remove(block);
       Destroy(block);
+      UIController.UpdateWheatInfo(_blocks.Count);
 
       return block.transform.position;
    }
@@ -70,9 +72,9 @@ public class BackpackController : MonoBehaviour
       if (Application.isPlaying)
          return;
 
-      for (int x = 0; x < Constants.BACKPACK_SIZE.x; x++)
-         for (int y = 0; y < Constants.BACKPACK_SIZE.y; y++)
-            for (int z = 0; z < Constants.BACKPACK_SIZE.z; z++)
+      for (int x = 0; x < Constants.backpackSize.x; x++)
+         for (int y = 0; y < Constants.backpackSize.y; y++)
+            for (int z = 0; z < Constants.backpackSize.z; z++)
             {
                Gizmos.DrawSphere(transform.position + startPosSerializable + new Vector3(x, y, -z) * distanceSerializable, 0.05f);
             }

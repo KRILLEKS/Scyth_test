@@ -1,10 +1,26 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEngine;
 
-public class Constants
+// it's constants but from scriptable obj
+public class Constants : MonoBehaviour
 {
-   public const float WHEAT_RESPAWN_TIME = 10f; // in seconds
-   public static int3 BACKPACK_SIZE = new int3(4,5,4);
+   public static float wheatRespawnTime; // in seconds
+   public static int3 backpackSize;
+   public static float coinFlySpeed; // in meters
+   public static float sellSpeed; // coins per second
+   public static float moneyPerOneCoin;
+
+   private void Awake()
+   {
+      Values values = Resources.Load<Values>("Values");
+
+      wheatRespawnTime = values.wheatRespawnTime;
+      backpackSize = values.backPackSize;
+      coinFlySpeed = values.coinFlySpeed;
+      sellSpeed = values.sellSpeed;
+      moneyPerOneCoin = values.moneyPerOneCoin;
+   }
 }
