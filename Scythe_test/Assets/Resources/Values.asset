@@ -15,8 +15,8 @@ MonoBehaviour:
   wheatRespawnTime: 10
   backPackSize:
     x: 4
-    y: 10
+    y: 5
     z: 4
-  coinFlySpeed: 250
-  sellSpeed: 10
+  coinFlySpeed: 350
+  sellSpeed: 15
   moneyPerOneCoin: 15
